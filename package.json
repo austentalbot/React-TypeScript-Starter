@@ -20,7 +20,9 @@
     "react": "^0.13.3"
   },
   "devDependencies": {
+    "browserify": "^10.2.4",
     "gulp": "^3.9.0",
-    "gulp-typescript": "^2.7.8"
+    "gulp-typescript": "^2.7.8",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

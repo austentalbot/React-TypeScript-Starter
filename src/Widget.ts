@@ -10,7 +10,11 @@ interface S {
 }
 
 class Widget extends React.Component<P, S> {
-
+  render() {
+    return React.DOM.div({
+      children: this.props.name
+    });
+  }
 }
 
 React.render(React.createElement(Widget, {name: 'Hello world'}), document.getElementById('react'));

@@ -9,11 +9,23 @@ var React = require('react');
 var Widget = (function (_super) {
     __extends(Widget, _super);
     function Widget() {
+        var _this = this;
         _super.apply(this, arguments);
+        this.state = {
+            score: 0
+        };
+        this._incrementScore = function () {
+            _this.setState({ score: _this.state.score + 1 });
+        };
     }
     Widget.prototype.render = function () {
         return React.DOM.div({
-            children: this.props.name
+            children: [
+                this.props.name + ' Score: ' + this.state.score,
+                React.DOM.button({
+                    onClick: this._incrementScore
+                }, 'Increment Score')
+            ]
         });
     };
     return Widget;
